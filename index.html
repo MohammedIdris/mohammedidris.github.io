@@ -1,60 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <title>Mohammed Idris | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
-        <h1>Mohammed Idris</h1>
-        <p>Senior Software Engineer – Java | Cloud | Microservices</p>
-    </header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Idris Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <button id="themeToggle" class="btn btn-outline-light">Toggle Dark Mode</button>
+        </div>
+    </div>
+</nav>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Results-driven software engineer with 7+ years of experience building scalable backend systems and cloud-native apps. Expertise in Java, Spring ecosystem, event-driven architecture, and DevOps. Delivered resilient systems in Agile environments for clients in retail, AgTech, and banking sectors.</p>
-    </section>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-3 d-none d-md-block bg-light sidebar pt-3">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-    <section>
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><strong>Languages:</strong> Java, JavaScript</li>
-            <li><strong>Frameworks:</strong> Spring Boot, Spring WebFlux, React.js</li>
-            <li><strong>Cloud:</strong> Azure, AWS (EC2, S3, MSK, etc.)</li>
-            <li><strong>DevOps:</strong> Kubernetes, Terraform, Jenkins, Docker, etc.</li>
-            <li><strong>Integration:</strong> Kafka, Keycloak, OAuth2</li>
-            <li><strong>Databases:</strong> PostgreSQL, Oracle, Elasticsearch</li>
-        </ul>
-    </section>
+        <main class="col-md-9 ms-sm-auto px-md-4 pt-4">
+            <section id="about">
+                <div class="text-center">
+                    <img src="assets/profile.jpg" class="rounded-circle" width="120" alt="Profile Picture">
+                    <h2>Mohammed Idris</h2>
+                    <p class="lead">Senior Software Engineer – Java | Cloud | Microservices</p>
+                    <p>Results-driven software engineer with 7+ years of experience building scalable backend systems and cloud-native applications. Strong expertise in Java, Spring ecosystem, event-driven architecture, and DevOps practices.</p>
+                </div>
+            </section>
+            <hr>
+            <section id="skills">
+                <h3>Skills (Scale: 1 to 10)</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Java <span class="badge bg-primary float-end">9</span></li>
+                    <li class="list-group-item">Spring Boot / WebFlux <span class="badge bg-primary float-end">9</span></li>
+                    <li class="list-group-item">Kafka <span class="badge bg-primary float-end">8</span></li>
+                    <li class="list-group-item">Azure / AWS <span class="badge bg-primary float-end">8</span></li>
+                    <li class="list-group-item">Kubernetes / Docker / Terraform <span class="badge bg-primary float-end">8</span></li>
+                    <li class="list-group-item">PostgreSQL / Oracle DB <span class="badge bg-primary float-end">7</span></li>
+                </ul>
+            </section>
+            <hr>
+            <section id="experience">
+                <h3>Professional Experience</h3>
+                <div class="mb-3">
+                    <h5>Tesco Technology, Bangalore — <small>Aug 2022 – Present</small></h5>
+                    <ul>
+                        <li>Built reactive microservices using Spring WebFlux and Kafka for employee data processing.</li>
+                        <li>Deployed services on Azure using Kubernetes, Terraform, and Azure DevOps.</li>
+                        <li>Designed cron jobs for scheduled ingestion and improved observability and database optimization.</li>
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <h5>Cropin Technology Solutions, Bangalore — <small>Jun 2019 – Jul 2022</small></h5>
+                    <ul>
+                        <li>Built Spring Boot microservices in Agile + TDD environment for SmartFarm Plus.</li>
+                        <li>Integrated Kafka for event-driven architecture and Keycloak for authentication.</li>
+                        <li>Used Jenkins, Docker, and AWS for end-to-end CI/CD deployment.</li>
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <h5>NTT Data, Bangalore — <small>Aug 2016 – May 2019</small></h5>
+                    <ul>
+                        <li>Worked with Wells Fargo on digital banking transformation projects.</li>
+                        <li>Created UIs for customer offer visualization and marketing campaign tools.</li>
+                        <li>Refactored legacy apps using Spring and Bootstrap.</li>
+                    </ul>
+                </div>
+            </section>
+            <hr>
+            <section id="projects">
+                <h3>Projects</h3>
+                <p>You can add your project links or GitHub repositories here.</p>
+            </section>
+            <hr>
+            <section id="education">
+                <h3>Education</h3>
+                <p><strong>Bachelor of Engineering (Electronics & Communication)</strong><br>
+                K. S. Institute of Technology, Bangalore, India — 2016</p>
+                <h4>Interests</h4>
+                <ul>
+                    <li>Open-source contributions</li>
+                    <li>Cloud architecture</li>
+                    <li>Backend performance optimization</li>
+                    <li>AI-assisted development tools</li>
+                </ul>
+            </section>
+            <hr>
+            <section id="contact">
+                <h3>Contact</h3>
+                <p>Email: mohammedidris119@gmail.com</p>
+                <p>Phone: +91 8197678885</p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/mohammed-idris-29ab60124" target="_blank">mohammed-idris</a></p>
+            </section>
+        </main>
+    </div>
+</div>
 
-    <section>
-        <h2>Experience</h2>
-        <h3>Tesco Technology (2022–Present)</h3>
-        <p>Developing HCM Adaptor integrating Tesco systems with Oracle/Zellis HCM. Built microservices using WebFlux & Kafka, deployed to Azure, improved observability & data pipelines.</p>
-
-        <h3>Cropin Technology (2019–2022)</h3>
-        <p>Built Spring Boot microservices for SmartFarm Plus, integrated Kafka, Keycloak, and managed CI/CD with Jenkins, Docker & AWS.</p>
-
-        <h3>NTT Data (2016–2019)</h3>
-        <p>Developed systems for Wells Fargo including UI tools and Spring-based refactoring. Improved legacy apps and campaign decisioning tools.</p>
-    </section>
-
-    <section>
-        <h2>Projects</h2>
-        <p><em>You can add your key projects here. Include links, GitHub repos, or demos.</em></p>
-    </section>
-
-    <section>
-        <h2>Contact</h2>
-        <p>Email: mohammedidris119@gmail.com</p>
-        <p>Phone: +91 8197678885</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/mohammed-idris-29ab60124" target="_blank">mohammed-idris</a></p>
-    </section>
-
-    <footer>
-        <p>© 2025 Mohammed Idris. All rights reserved.</p>
-    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById("themeToggle").addEventListener("click", function () {
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute("data-bs-theme");
+    html.setAttribute("data-bs-theme", currentTheme === "dark" ? "light" : "dark");
+});
+</script>
 </body>
 </html>

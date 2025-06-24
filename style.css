@@ -1,40 +1,20 @@
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f9f9f9;
-    color: #333;
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
 }
-header {
-    background: #003366;
-    color: white;
-    padding: 20px 10px;
-    text-align: center;
+main {
+    margin-left: 25%;
 }
-.profile-pic {
-    width: 120px;
-    border-radius: 60px;
-    border: 3px solid white;
-}
-section {
-    padding: 20px;
-    margin: 10px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 8px #ccc;
-}
-h2 {
-    color: #003366;
-}
-a {
-    color: #0055aa;
-    text-decoration: none;
-}
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #003366;
-    color: white;
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    main {
+        margin-left: 0;
+    }
 }
